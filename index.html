@@ -3,28 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkata Subramani S | Portfolio</title>
+    <title>Venkata Subramani S | Creative Portfolio & Dashboard</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Portfolio of Venkata Subramani S, a Computer Science Engineer and Front-End Developer specializing in building interactive and premium web applications.">
+    <meta name="keywords" content="Venkata Subramani S, Portfolio, Computer Science Engineer, Web Developer, React, Frontend Developer">
+    <meta name="author" content="Venkata Subramani S">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts: Space Grotesk, Outfit, and JetBrains Mono for Code styling -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for high-tech icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <!-- Background Canvas for Space Particle System -->
+    <canvas id="space-canvas"></canvas>
+    
+    <!-- Glowing background lights -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
 
-    <nav class="navbar">
+    <!-- Navigation Bar: Floating Dock/Island Style -->
+    <nav class="navbar" id="floating-navbar">
         <div class="nav-content">
-            <a href="#" class="logo">VS.</a>
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>VS<span class="logo-accent"> /&gt;</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero"><i class="fa-solid fa-house-chimney"></i> <span>Home</span></a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> <span>Profile</span></a></li>
+                <li><a href="#skills"><i class="fa-solid fa-sliders"></i> <span>Skills</span></a></li>
+                <li><a href="#projects"><i class="fa-solid fa-code"></i> <span>Projects</span></a></li>
+                <li><a href="#terminal-section"><i class="fa-solid fa-terminal"></i> <span>Terminal</span></a></li>
+                <li><a href="#contact"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,210 +52,446 @@
         </div>
     </nav>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <div class="profile-img-container reveal">
-                    <img src="profile.png" alt="Venkata Subramani S" class="profile-img">
-                </div>
-                <p class="greeting reveal">Hello, I'm</p>
-                <h1 class="name reveal">Venkata Subramani S</h1>
-                <h2 class="role reveal">Computer Science Engineer</h2>
-                <p class="summary reveal">Driven and goal-oriented student actively seeking an opportunity to engineer solutions and advance technical expertise in computer technologies. Passionate about securing a challenging role to contribute value to a reputable organization.</p>
-                <div class="cta-buttons reveal">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about section">
-            <h2 class="section-title reveal">About Me</h2>
-            <div class="about-grid">
-                <div class="education card reveal">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4>B.E Computer Science and Engineering</h4>
-                            <p>National Engineering College - K.R. Nagar, Kovilpatti</p>
-                            <span class="date">2023 - 2027</span>
-                            <span class="grade">6.7 CGPA</span>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Diploma</h4>
-                            <p>Jayaraj Annapackiam Polytechnic College</p>
-                            <span class="date">2022 - 2024</span>
-                            <span class="grade">74%</span>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>SSLC</h4>
-                            <p>Cathedral Higher Secondary School</p>
-                            <span class="date">2018 - 2019</span>
-                            <span class="grade">48%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="interests card reveal">
-                    <h3><i class="fa-solid fa-heart"></i> Areas of Interest</h3>
-                    <ul class="interest-list">
-                        <li>Full Stack Front End Developer</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills section">
-            <h2 class="section-title reveal">Skills & Languages</h2>
-            <div class="skills-grid">
-                <div class="skill-category card reveal">
-                    <h3>Languages</h3>
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">C</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">React JS</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category card reveal">
-                    <h3>Soft Skills</h3>
-                    <div class="tags soft-tags">
-                        <span class="tag">Problem Solving</span>
-                        <span class="tag">English Communication</span>
-                        <span class="tag">Time Management</span>
-                        <span class="tag">Critical Thinking</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="experience section">
-            <h2 class="section-title reveal">Experience & Achievements</h2>
-            <div class="exp-grid">
-                <div class="internship card reveal">
-                    <h3><i class="fa-solid fa-briefcase"></i> Internships</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4>Web Development Projects</h4>
-                            <p>Prodigy Internship</p>
-                            <p class="desc"><strong>Personal Portfolio Website:</strong> Designed and engineered a beginner-friendly portfolio using HTML and CSS with sections like Header, About, Skills, Projects, Resume, Contact, and Footer to showcase personal brand and work.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievements card reveal">
-                    <h3><i class="fa-solid fa-trophy"></i> Achievements</h3>
-                    <ul class="achievement-list">
-                        <li><i class="fa-solid fa-star"></i> LeetCode - 25+ problems solved</li>
-                        <li><i class="fa-solid fa-star"></i> SkillRack - 1000+ problems solved</li>
-                    </ul>
-                    <h3 class="mt-4"><i class="fa-solid fa-certificate"></i> Certifications</h3>
-                    <ul class="achievement-list">
-                        <li><i class="fa-solid fa-check"></i> Web Development - 3 certificates</li>
-                        <li><i class="fa-solid fa-check"></i> Beginners Python (Udemy)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects section">
-            <h2 class="section-title reveal">Featured Projects</h2>
-            <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <h3>AI-Based Coding Behavior Analysis System for Technical Interviews</h3>
-                        <p>Engineered an AI-powered coding interview platform that analyzes coding behavior and generates authenticity scores using machine learning. Developed multi-language code execution, role-based dashboards, and interactive code visualization for technical assessment and learning.</p>
-                        <div class="project-tech">
-                            <span>React.js</span><span>Python</span><span>Flask</span><span>MongoDB</span><span>Scikit-Learn</span>
-                        </div>
-                        <a href="https://github.com/SUBRAMANI408/AI-Based-Coding-Behavior-Analysis-System-for-technical-assessment" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
+    <!-- Main Container -->
+    <main class="main-container">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-glow-card">
+                <div class="profile-frame">
+                    <div class="avatar-ring"></div>
+                    <img src="profile.png" alt="Venkata Subramani S" class="avatar-image">
+                    <div class="status-badge">
+                        <span class="status-dot animate-pulse"></span>
+                        <span class="status-text">Available for Hire</span>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <h3>Super Marking Billing System</h3>
-                        <p class="project-role">Role: Front-End Development</p>
-                        <p>Engineered a responsive web interface for efficient product billing, invoice generation, and real-time total calculation to streamline supermarket checkout operations.</p>
-                        <div class="project-tech">
+                <div class="hero-info">
+                    <div class="badge-tag">Computer Science Engineer</div>
+                    <h1 class="hero-title">
+                        Venkata Subramani S
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        I build <span class="text-gradient typewriter-text" id="typewriter" data-words='["interactive web apps", "AI-based interview portals", "responsive frontend dashboards"]'></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-summary">
+                        Driven and goal-oriented developer seeking to engineer high-impact solutions and advance technical expertise in modern computer technologies.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View Projects</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Bento Section -->
+        <section id="about" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">01 / PROFILE</span>
+                <h2 class="section-title-glow">About Me & Education</h2>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Grid Element 1: Profile Bio Card -->
+                <div class="bento-card col-span-2 row-span-1 bio-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-user-astronaut icon-gradient"></i>
+                        <h3>The Developer Journey</h3>
+                    </div>
+                    <p class="bio-text">
+                        Currently pursuing my <strong>B.E. in Computer Science and Engineering</strong>, I am deeply passionate about front-end architecture, full-stack systems, and bridging design with development. I love crafting interfaces that feel alive and responsive, using modern layout paradigms.
+                    </p>
+                    <div class="stats-counter-grid">
+                        <div class="stat-counter-box">
+                            <span class="counter-num">1000+</span>
+                            <span class="counter-label">SkillRack Solved</span>
+                        </div>
+                        <div class="stat-counter-box">
+                            <span class="counter-num">25+</span>
+                            <span class="counter-label">LeetCode Solved</span>
+                        </div>
+                        <div class="stat-counter-box">
+                            <span class="counter-num">3+</span>
+                            <span class="counter-label">Web Certifications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid Element 2: Areas of Interest -->
+                <div class="bento-card col-span-1 row-span-1 interest-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-star icon-gradient"></i>
+                        <h3>Specialization</h3>
+                    </div>
+                    <div class="specialization-badge">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>Full Stack Front End Developer</span>
+                    </div>
+                    <div class="interests-tags">
+                        <span class="int-tag"><i class="fa-brands fa-react"></i> React Architecture</span>
+                        <span class="int-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Engineering</span>
+                        <span class="int-tag"><i class="fa-solid fa-gears"></i> Systems Programming</span>
+                    </div>
+                </div>
+
+                <!-- Grid Element 3: Education Timeline (Large Box) -->
+                <div class="bento-card col-span-3 education-timeline-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-graduation-cap icon-gradient"></i>
+                        <h3>Academic History</h3>
+                    </div>
+                    <div class="timeline-container-v2">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-row">
+                            <div class="timeline-time">2023 - 2027</div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-details">
+                                <h4 class="timeline-title">B.E. Computer Science and Engineering</h4>
+                                <p class="timeline-org">National Engineering College - K.R. Nagar, Kovilpatti</p>
+                                <span class="score-badge"><i class="fa-solid fa-chart-simple"></i> CGPA: 6.7</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-row">
+                            <div class="timeline-time">2022 - 2024</div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-details">
+                                <h4 class="timeline-title">Diploma in Computer Engineering</h4>
+                                <p class="timeline-org">Jayaraj Annapackiam Polytechnic College</p>
+                                <span class="score-badge"><i class="fa-solid fa-percent"></i> Score: 74%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-row">
+                            <div class="timeline-time">2018 - 2019</div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-details">
+                                <h4 class="timeline-title">SSLC</h4>
+                                <p class="timeline-org">Cathedral Higher Secondary School</p>
+                                <span class="score-badge"><i class="fa-solid fa-percent"></i> Score: 48%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">02 / EXPERTISE</span>
+                <h2 class="section-title-glow">Skills & Technologies</h2>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Tech Stack Cards -->
+                <div class="bento-card col-span-2 skill-dashboard-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-laptop-code icon-gradient"></i>
+                        <h3>Development Stack</h3>
+                    </div>
+                    <p class="card-summary">My core toolkit used for engineering interactive web platforms, mobile modules, and database schemas.</p>
+                    
+                    <div class="skills-showcase">
+                        <div class="skill-category">
+                            <span class="skill-cat-title">Frontend Frameworks & UI</span>
+                            <div class="skill-tags-flex">
+                                <span class="skill-pill"><i class="fa-brands fa-react"></i> React JS</span>
+                                <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <span class="skill-cat-title">Programming Languages</span>
+                            <div class="skill-tags-flex">
+                                <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="skill-pill"> C Language</span>
+                                <span class="skill-pill"> C++</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <span class="skill-cat-title">Database & Backend</span>
+                            <div class="skill-tags-flex">
+                                <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Cards -->
+                <div class="bento-card col-span-1 soft-skills-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-brain icon-gradient"></i>
+                        <h3>Professional Core</h3>
+                    </div>
+                    <ul class="soft-skills-checklist">
+                        <li>
+                            <i class="fa-solid fa-shield-halved check-icon"></i>
+                            <div>
+                                <span class="list-title">Problem Solving</span>
+                                <span class="list-desc">Solving 1000+ problems on coding platforms.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-comments check-icon"></i>
+                            <div>
+                                <span class="list-title">English Communication</span>
+                                <span class="list-desc">Professional and technical dialogue.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-hourglass-half check-icon"></i>
+                            <div>
+                                <span class="list-title">Time Management</span>
+                                <span class="list-desc">Coordinating academic loads & development.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-lightbulb check-icon"></i>
+                            <div>
+                                <span class="list-title">Critical Thinking</span>
+                                <span class="list-desc">Designing platforms and behavior analysis algorithms.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience & Certifications Bento -->
+                <div class="bento-card col-span-3 exp-cert-card">
+                    <div class="exp-cert-grid">
+                        <div class="exp-subcard">
+                            <div class="card-icon-header">
+                                <i class="fa-solid fa-briefcase icon-gradient"></i>
+                                <h3>Internships</h3>
+                            </div>
+                            <div class="internship-item">
+                                <div class="item-header">
+                                    <span class="item-title">Web Development Project Intern</span>
+                                    <span class="item-org">Prodigy Internship</span>
+                                </div>
+                                <p class="item-desc">
+                                    Designed and engineered a complete responsive personal portfolio website to showcase developers' brand, using semantic HTML structures and CSS layout principles.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cert-subcard">
+                            <div class="card-icon-header">
+                                <i class="fa-solid fa-certificate icon-gradient"></i>
+                                <h3>Certifications</h3>
+                            </div>
+                            <ul class="cert-list">
+                                <li>
+                                    <i class="fa-solid fa-award"></i>
+                                    <div>
+                                        <strong>Web Development Suite</strong>
+                                        <span>3 industry-recognized certificates of completion</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-award"></i>
+                                    <div>
+                                        <strong>Beginners Python Course</strong>
+                                        <span>Udemy Academic Certification</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">03 / CREATIONS</span>
+                <h2 class="section-title-glow">Featured Work</h2>
+            </div>
+            
+            <div class="projects-layout-grid">
+                
+                <!-- Project Card 1 (Featured - Big) -->
+                <div class="project-box featured-project col-span-2">
+                    <div class="project-banner">
+                        <div class="tech-stack-strip">
+                            <span>React.js</span><span>Python</span><span>Flask</span><span>MongoDB</span><span>Scikit-Learn</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-badge">AI Interview System</div>
+                        <h3 class="project-title">AI-Based Coding Behavior Analysis System for Technical Interviews</h3>
+                        <p class="project-text-content">
+                            An innovative AI-powered technical recruitment tool assessing developer actions. Generates authenticity scores based on keystroke sequences and code execution patterns. Features fully integrated sandboxed runners, detailed logs, and interactive supervisor visualization charts.
+                        </p>
+                        <div class="project-actions">
+                            <a href="https://github.com/SUBRAMANI408/AI-Based-Coding-Behavior-Analysis-System-for-technical-assessment" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-box standard-project">
+                    <div class="project-body">
+                        <div class="tech-stack-strip">
                             <span>Java</span>
                         </div>
-                        <a href="https://github.com/SUBRAMANI408/java_Supermarket-Billing-System.git" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
+                        <div class="project-badge">System Utility</div>
+                        <h3 class="project-title">Super Marking Billing System</h3>
+                        <p class="project-text-content">
+                            Designed and coded a desktop supermarket checkout console that handles inventory tracking, dynamic subtotaling, billing operations, and invoice rendering.
+                        </p>
+                        <div class="project-actions">
+                            <a href="https://github.com/SUBRAMANI408/java_Supermarket-Billing-System.git" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <h3>Recipe Recommendation</h3>
-                        <p>Developed an interactive user interface that recommends recipes based on user preferences, ingredients, and dietary filters. Implemented responsive design and dynamic content display to enhance user engagement and simplify recipe discovery.</p>
-                        <div class="project-tech">
-                            <span>Front-End</span>
+                <!-- Project Card 3 -->
+                <div class="project-box standard-project">
+                    <div class="project-body">
+                        <div class="tech-stack-strip">
+                            <span>HTML5</span><span>CSS3</span><span>JS</span>
                         </div>
-                        <a href="https://github.com/SUBRAMANI408/recipe_finder.git" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
+                        <div class="project-badge">Frontend Web</div>
+                        <h3 class="project-title">Recipe Recommendation</h3>
+                        <p class="project-text-content">
+                            Interactive web dashboard suggesting culinary preparations based on items available in the user's pantry. Includes category grouping and responsive UI.
+                        </p>
+                        <div class="project-actions">
+                            <a href="https://github.com/SUBRAMANI408/recipe_finder.git" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <h3>Healthcare Project</h3>
-                        <p class="project-role">Role: Front-End Development</p>
-                        <p>Designed and implemented a user-friendly frontend for managing patient information and appointment scheduling.</p>
-                        <div class="project-tech">
-                            <span>Front-End</span>
+                <!-- Project Card 4 -->
+                <div class="project-box standard-project">
+                    <div class="project-body">
+                        <div class="tech-stack-strip">
+                            <span>Web UI</span>
                         </div>
-                        <a href="https://github.com/SUBRAMANI408/MWT-PROJECT-FINAL.git" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
+                        <div class="project-badge">Frontend Web</div>
+                        <h3 class="project-title">Healthcare System</h3>
+                        <p class="project-text-content">
+                            Designed a medical operations center UI helping users request clinical appointments, browse specialist directories, and monitor records.
+                        </p>
+                        <div class="project-actions">
+                            <a href="https://github.com/SUBRAMANI408/MWT-PROJECT-FINAL.git" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <h3>Ground Booking System</h3>
-                        <p>Developed a dedicated application to streamline ground booking and management, ensuring an intuitive and seamless user experience.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
+                <!-- Project Card 5 -->
+                <div class="project-box standard-project">
+                    <div class="project-body">
+                        <div class="tech-stack-strip">
+                            <span>Flutter</span><span>Dart</span>
                         </div>
-                        <a href="https://github.com/SUBRAMANI408/flutter-project.git" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> View Repository</a>
+                        <div class="project-badge">Mobile App</div>
+                        <h3 class="project-title">Ground Booking System</h3>
+                        <p class="project-text-content">
+                            Mobile application enabling sports team organizers to inspect court schedules, reserve playing fields, and handle slots dynamically.
+                        </p>
+                        <div class="project-actions">
+                            <a href="https://github.com/SUBRAMANI408/flutter-project.git" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact section">
-            <div class="contact-box reveal">
-                <h2>Let's Work Together</h2>
-                <p>I am currently open for opportunities. Feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:subramani08012004@gmail.com" class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>subramani08012004@gmail.com</span>
-                    </a>
-                    <a href="tel:+919585899506" class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+91 9585899506</span>
-                    </a>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Tirunelveli, Tamil Nadu</span>
-                    </div>
+        <!-- Terminal Section -->
+        <section id="terminal-section" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">04 / INTERACTIVE</span>
+                <h2 class="section-title-glow">Interactive Shell Simulator</h2>
+            </div>
+            
+            <div class="terminal-wrapper">
+                <div class="terminal-header-bar">
+                    <div class="window-dot red"></div>
+                    <div class="window-dot yellow"></div>
+                    <div class="window-dot green"></div>
+                    <span class="terminal-title">guest@subramani-developer: ~</span>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/SUBRAMANI408" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <div class="terminal-content-area" id="terminal-output">
+                    <div class="terminal-line text-system">System initialization complete... Ready for commands.</div>
+                    <div class="terminal-line text-system">Type <span class="text-command">help</span> to list available commands.</div>
+                    <div class="terminal-line"></div>
+                </div>
+                <div class="terminal-input-row">
+                    <span class="terminal-prompt">guest@subramani:~$</span>
+                    <input type="text" class="terminal-input-field" id="terminal-input" autocomplete="off" placeholder="type a command...">
                 </div>
             </div>
         </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">05 / REACH OUT</span>
+                <h2 class="section-title-glow">Let's Build Together</h2>
+            </div>
+            
+            <div class="contact-layout-box">
+                <div class="contact-headline">
+                    <h3>Get In Touch</h3>
+                    <p>I am currently exploring student projects, developer internships, and open-source collaborations. Drop me a line!</p>
+                </div>
+                
+                <div class="contact-links-grid">
+                    <a href="mailto:subramani08012004@gmail.com" class="contact-button-card">
+                        <i class="fa-solid fa-envelope btn-icon"></i>
+                        <span class="btn-title">Email Me</span>
+                        <span class="btn-detail">subramani08012004@gmail.com</span>
+                    </a>
+                    
+                    <a href="tel:+919585899506" class="contact-button-card">
+                        <i class="fa-solid fa-phone btn-icon"></i>
+                        <span class="btn-title">Call Direct</span>
+                        <span class="btn-detail">+91 9585899506</span>
+                    </a>
+                    
+                    <div class="contact-button-card pointer-none">
+                        <i class="fa-solid fa-location-dot btn-icon"></i>
+                        <span class="btn-title">Base Location</span>
+                        <span class="btn-detail">Tirunelveli, Tamil Nadu</span>
+                    </div>
+                </div>
+                
+                <div class="social-dock-footer">
+                    <span class="dock-title">Developer Socials</span>
+                    <div class="dock-buttons">
+                        <a href="#" aria-label="LinkedIn Profile" class="dock-item"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/SUBRAMANI408" target="_blank" aria-label="GitHub Repos" class="dock-item"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 Venkata Subramani S. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="footer-block">
+        <p>&copy; 2026 Venkata Subramani S. Designed with <i class="fa-solid fa-heart footer-heart"></i>. All Rights Reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
